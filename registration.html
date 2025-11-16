@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registration Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f7f9;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .container {
+      background: #fff;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
+      width: 350px;
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #333;
+    }
+    label {
+      font-weight: bold;
+      display: block;
+      margin: 10px 0 5px;
+    }
+    input[type="text"], 
+    input[type="email"], 
+    input[type="password"], 
+    select {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+    .radio-group, .checkbox-group {
+      margin-bottom: 10px;
+    }
+    .radio-group label, 
+    .checkbox-group label {
+      font-weight: normal;
+      margin-right: 15px;
+    }
+    button {
+      width: 100%;
+      padding: 10px;
+      border: none;
+      background: #007BFF;
+      color: white;
+      font-size: 16px;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Registration Form</h2>
+    <form>
+      <!-- Text Fields -->
+      <label for="name">Full Name:</label>
+      <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" placeholder="Enter password" required>
+
+      <!-- Radio Buttons -->
+      <label>Gender:</label>
+      <div class="radio-group">
+        <label><input type="radio" name="gender" value="male"> Male</label>
+        <label><input type="radio" name="gender" value="female"> Female</label>
+        <label><input type="radio" name="gender" value="other"> Other</label>
+      </div>
+
+      <!-- Checkboxes -->
+      <label>Interests:</label>
+      <div class="checkbox-group">
+        <label><input type="checkbox" name="interest" value="coding"> Coding</label>
+        <label><input type="checkbox" name="interest" value="music"> Music</label>
+        <label><input type="checkbox" name="interest" value="sports"> Sports</label>
+      </div>
+
+      <!-- Dropdown -->
+      <label for="country">Country:</label>
+      <select id="country" name="country">
+        <option value="">--Select--</option>
+        <option value="india">India</option>
+        <option value="usa">USA</option>
+        <option value="uk">UK</option>
+        <option value="canada">Canada</option>
+      </select>
+
+      <!-- Submit Button -->
+      <button type="submit">Register</button>
+    </form>
+  </div>
+</body>
+</html>
