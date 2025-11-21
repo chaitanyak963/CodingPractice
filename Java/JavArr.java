@@ -14,7 +14,8 @@ public class ArrJav {
             arr[i] = sc.nextInt();
         }
         System.out.println("The array is : " + Arrays.toString(arr));
-        System.out.println("Select the option to perform : \n 1.Insert \n 2.Insert at Index \n 3.Update \n 4.Update a value \n 5.Sort with keywords \n 6.Sort Manually");
+        System.out.println("Select the option to perform : \n 1.Insert \n 2.Insert at Index \n 3.Update \n 4.Update a value \n 5.Sort with keywords \n 6.Sort Manually" +
+                "\n7.Array Reverse");
         int opt = sc.nextInt();
         switch (opt) {
             case 1:
@@ -95,6 +96,14 @@ public class ArrJav {
                     }
             }
                 System.out.println("The array is : " + Arrays.toString(arr));
+            case 7:
+                /*Print reverse of array*/
+                for (int i=0;i<arrSize/2;i++){
+                    int temp = arr[i];
+                    arr[i] = arr[arrSize-i-1];
+                    arr[arrSize-i-1] = temp;
+                }
+                System.out.println("The array is : "+Arrays.toString(arr));
             default:
                 break;
         }
